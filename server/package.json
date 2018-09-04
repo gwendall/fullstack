@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./build/main.js",
+    "start:dev": "backpack",
+    "build": "backpack build",
+    "deploy": "now -e NODE_ENV=\"production\" && now alias"
+  },
+  "dependencies": {
+    "backpack-core": "^0.7.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}

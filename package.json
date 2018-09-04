@@ -1,0 +1,29 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A build system for ambitious Node / React projects",
+  "author": {
+    "name": "Gwendall Esnault",
+    "email": "gwendall.esnault@gmail.com",
+    "url": "https://gwen.im"
+  },
+  "scripts": {
+    "client-start:dev": "cd client && yarn start:dev",
+    "client-deploy": "cd client && yarn run deploy",
+    "server-start:dev": "cd server && yarn start:dev",
+    "server-deploy": "cd server && yarn run deploy",
+    "dev": "concurrently --kill-others-on-fail \"yarn client-start:dev\" \"yarn server-start:dev\"",
+    "deploy": "concurrently --kill-others-on-fail \"yarn client-deploy\" \"yarn server-deploy\""
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gwendall/my-idea-pool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gwendall/my-idea-pool/issues"
+  }
+}
